@@ -19,12 +19,11 @@ public class GrpcClient {
         HelloResponse helloResponse = stub.hello(HelloRequest.newBuilder()
             .setFirstName("Baeldung")
             .setLastName("gRPC")
-                        .setFirstNum(10)
-                        .setSecondNum(20)
+                .setFirstNum(10)
+                .setSecondNum(20)
             .build());
 
         System.out.println("Response received from server:\n" + helloResponse);
-        System.out.println("Sum of numbers: ");
 
         channel.shutdown();
     }

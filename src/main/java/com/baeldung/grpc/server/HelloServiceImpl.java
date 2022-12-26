@@ -18,9 +18,11 @@ public class HelloServiceImpl extends HelloServiceImplBase {
             .append(" ")
             .append(request.getLastName())
             .toString();
+        int sum = request.getFirstNum() + request.getSecondNum();
 
         HelloResponse response = HelloResponse.newBuilder()
             .setGreeting(greeting)
+                .setSum(sum)
             .build();
 
         responseObserver.onNext(response);
