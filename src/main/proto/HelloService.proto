@@ -5,10 +5,13 @@ package com.baeldung.grpc;
 message HelloRequest {
     string firstName = 1;
     string lastName = 2;
+    int32 firstNumber = 3;
+    int32 secondNumber = 4;
 }
 
 message HelloResponse {
     string greeting = 1;
+    int32 sum = 2;
 }
 
 service HelloService {
